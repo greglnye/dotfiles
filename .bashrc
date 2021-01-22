@@ -74,3 +74,7 @@ if grep -qE "(Microsoft|WSL)" /proc/version &>/dev/null; then
     # Requires: https://sourceforge.net/projects/vcxsrv/ (or alternative)
     export DISPLAY=:0
 fi
+
+export LIBGL_ALWAYS_INDIRECT=1
+
+eval "$(keychain --eval --quiet id_rsa)"
