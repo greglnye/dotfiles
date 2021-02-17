@@ -54,6 +54,7 @@ source "${HOME}"/.asdf/asdf.sh
 #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 export FZF_DEFAULT_OPTS="--color=dark"
+export FZF_TMUX_OPTS="-d 33%"
 [ -f "${HOME}/.fzf.bash" ] && source "${HOME}/.fzf.bash"
 
 # WSL 2 specific settings.
