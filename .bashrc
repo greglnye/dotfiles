@@ -52,7 +52,7 @@ source "${HOME}"/.asdf/asdf.sh
 # Enable a better reverse search experience.
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
 #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore --follow --glob '!.git'"
 export FZF_DEFAULT_OPTS="--color=dark"
 export FZF_TMUX_OPTS="-d 33%"
 [ -f "${HOME}/.fzf.bash" ] && source "${HOME}/.fzf.bash"
