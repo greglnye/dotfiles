@@ -34,6 +34,7 @@ video recordings. These dotfiles currently support easily switching between
 [One](https://github.com/rakr/vim-one) but you can use any theme you'd like.
 
 #### Theme progression
+
 - January 2021 (Gruvbox Community)
 - April 2020 (One)
 - December 2018 (Gruvbox Community)
@@ -50,37 +51,36 @@ colors or [adjust the set-theme
 script](#how-to-add-custom-themes-to-the-set-theme-script) to add a custom
 theme.
 
+Ater installing these dotfiles you can run this from your terminal:
+
+```sh
+# Switch to a supported theme.
+# Theme names are listed below near the screenshots.
+# You can also run set-theme --help to see a list of themes.
+set-theme [theme_name]
+
+# Switch between dark and light backgrounds for the active theme.
+set-theme --toggle-bg
+
+# Switch the theme and toggle the background in 1 command.
+set-theme [theme_name] --toggle-bg
+```
+
+*If you get an error about your terminal config file not being found please
+review [this FAQ
+item](#how-to-use-a-different-terminal-in-the-set-theme-script).*
+
 #### Gruvbox Community
+
+`set-theme gruvbox`
 
 ![Dotfiles](https://nickjanetakis.com/assets/blog/dotfiles-c85f20a61decb0d4676530ff4c65a818ee9b362cf9f380a76c9d44e1254d03f3.jpg)
 
-```sh
-# After installing these dotfiles you can run this from your terminal to toggle dark and light mode:
-set-theme gruvbox --toggle-bg
-
-# You can also switch to this theme at any time without toggling the background by running:
-set-theme gruvbox
-```
-
-*If you get an error about your terminal config file not being found please
-review [this FAQ
-item](#how-to-use-a-different-terminal-in-the-set-theme-script).*
-
 #### One
 
+`set-theme one`
+
 ![Dotfiles](https://nickjanetakis.com/assets/blog/dotfiles-2020-04-14-e375233b9aaf52ab5d8411ba28963f098094c91860e069a7f1ee45916a051929.jpg)
-
-```sh
-# After installing these dotfiles you can run this from your terminal to toggle dark and light mode:
-set-theme one --toggle-bg
-
-# You can also switch to this theme at any time without toggling the background by running:
-set-theme one
-```
-
-*If you get an error about your terminal config file not being found please
-review [this FAQ
-item](#how-to-use-a-different-terminal-in-the-set-theme-script).*
 
 ## Quickly Get Set Up with These Dotfiles
 
@@ -363,9 +363,6 @@ get it added to the script.
 
 ### How to use a different terminal in the set-theme script?
 
-Prefer a video? [Here's a video](https://www.youtube.com/watch?v=h509rn2xIyU&t=516s)
-that demonstrates performing the steps below.
-
 I'm using the Microsoft Terminal but if you're using something else then your
 terminal's colors won't get updated by this script because the script looks for
 strings that are in MS terminal's config, but it's not painful to change.
@@ -377,8 +374,9 @@ will be different than the non-preview edition.*
 You'll want to adjust the `set-theme` script by doing this:
 
 1. Change the `TERMINAL_CONFIG` variable to reference your terminal config's path
-2. Change the regex in the `change_terminal_theme` function to use your terminal's config option names
-3. Optionally install Gruvbox, One or any other themes (the MS Terminal config in this repo includes them)
+2. Change the `terminal` attributes in the `THEMES` dictionary to use your terminal's config option names
+3. Change the regex in the `change_terminal_theme` function based on your terminal's config option formatting rules
+4. Optionally install Gruvbox, One or any other themes (the MS Terminal config in this repo includes them)
 
 ### How to fix Vim taking a long time to open when inside of WSL?
 

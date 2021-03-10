@@ -5,6 +5,7 @@ AMIs
 APIs
 APM
 APS
+AT2005
 AWS
 Airtable
 Analytics
@@ -21,6 +22,7 @@ CDN
 CI
 CI / CD
 CLI
+CME
 CMS
 CPUs
 CRM
@@ -31,24 +33,27 @@ Caddy
 Camtasia
 CapRover
 Capistrano
+CentOS
 Certbot
 Chromebook
 CircleCI
 CloudFront
 CloudWatch
 Cloudflare
+Cloudlifter
 CodeIgniter
 Compose's
 ConEmu
 Connexion
 Coronavirus
 Cron
+DAW
 DBeaver
 DDD
 DKIM
 DNS
 DaVinci
-DataDog
+Datadog
 DevOps
 DexPot
 DigitalOcean
@@ -59,6 +64,7 @@ Dockerfile
 Dockerfiles
 Dockerize
 Dockerized
+Dragonpad
 DropBox
 Dyno
 Dynos
@@ -80,6 +86,8 @@ Fargate
 Fastly
 Firebase
 Flatpickr
+FlexiSpot
+Focusrite
 GCP
 GPG
 GVim
@@ -113,6 +121,7 @@ IIS
 IPS
 Idempotency
 InfluxDB
+InnoGear
 IrfanView
 JS
 JSON
@@ -150,9 +159,12 @@ MobyLinux
 MongoDB
 Mux
 MySQL
+NEEWER
 NERDTree
+Namespacing
 Neo4j
 Netlify
+Noctua
 NumPy
 OAuth
 OKR
@@ -168,6 +180,7 @@ PPA
 PPI
 PaaS
 PagerDuty
+Pandoc
 Papertrail
 PaymentIntents
 Photoshop
@@ -187,6 +200,7 @@ README
 RESTPlus
 RESTful
 RHEL
+RPMs
 RQ
 RSS
 RabbitMQ
@@ -194,6 +208,7 @@ RedHat
 Reddit
 Redis
 Rekognition
+Rogan
 Route53
 Rubocop
 S3
@@ -203,6 +218,7 @@ SDK
 SES
 SHA
 SKUs
+SM7B
 SMTP
 SNS
 SQLAlchemy
@@ -211,6 +227,7 @@ SQS
 SSD
 SSDs
 SSL
+Scarlett
 SendGrid
 Sendy
 Sennheiser
@@ -219,6 +236,7 @@ Serverless
 ShellCheck
 Shopify
 Shopify's
+Shure
 Sidekiq
 Solr
 StackOverflow
@@ -226,6 +244,7 @@ TCP
 TTY
 TailwindCSS
 TailwindUI
+Technica
 Terraform
 That'll
 Theorycrafting
@@ -245,7 +264,10 @@ VM
 VPC
 VSCode
 VSCode's
+VST
+VSTs
 VcXsrv
+Vertica
 Vimeo
 VirtualBox
 Virtualenv
@@ -257,6 +279,7 @@ Webpacker
 WhatsApp
 Wistia
 WordPress
+XLR
 Xenial
 YAML
 Youtube
@@ -273,12 +296,14 @@ balancer
 benchmarking
 blockchain
 boolean
+buildpack
 card
 centos
 centric
 changelog
 codebase
 codebases
+compgen
 config
 cron
 cryptocurrency
@@ -291,6 +316,7 @@ distro
 distros
 dnsmasq
 dotfiles
+eval
 foobar2000
 frictionless
 gmail
@@ -304,6 +330,7 @@ healthcheck
 hostname
 html
 htop
+i2
 i3
 iptables
 irreproducible
@@ -324,6 +351,7 @@ mtime
 mysql
 mysqldump
 namespace
+namespaced
 nginx
 ngrok
 observability
@@ -334,6 +362,9 @@ pem's
 performant
 pgAdmin
 pjax
+podcasting
+pre
+printf
 programmatically
 psql
 purs
@@ -341,8 +372,10 @@ pwgen
 queueing
 repo
 repos
+repurposed
 resize
 rsync
+runnable
 scalable
 schemas
 screencast
@@ -350,6 +383,7 @@ screencasts
 searchable
 sed
 sendgrid
+sibilance
 sql
 stateful
 stderr

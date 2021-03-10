@@ -325,7 +325,9 @@ noremap <F7> :set list!<CR>
 inoremap <F7> <C-o>:set list!<CR>
 cnoremap <F7> <C-c>:set list!<CR>
 
-" Move visually selected lines up or down.
+" Move 1 more lines up or down in normal and visual selection modes.
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
 
@@ -372,7 +374,10 @@ au FocusGained,BufEnter * :checktime
 autocmd InsertLeave * silent! set nopaste
 
 " Make sure all types of requirements.txt files get syntax highlighting.
-autocmd BufNewFile,BufRead requirements*.txt set syntax=python
+autocmd BufNewFile,BufRead requirements*.txt set ft=python
+
+" Make sure .aliases, .bash_aliases and similar files get syntax highlighting.
+autocmd BufNewFile,BufRead .*aliases set ft=sh
 
 " Ensure tabs don't get converted to spaces in Makefiles.
 autocmd FileType make setlocal noexpandtab
@@ -601,7 +606,7 @@ let g:limelight_conceal_ctermfg=244
 
 let g:mkdp_auto_close=0
 let g:mkdp_refresh_slow=1
-let g:mkdp_markdown_css='/home/nick/.local/lib/github-markdown-css/github-markdown.css'
+let g:mkdp_markdown_css=fnameescape($HOME).'/.local/lib/github-markdown-css/github-markdown.css'
 
 " .............................................................................
 " SirVer/ultisnips
@@ -614,10 +619,15 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " janko/vim-test
 " .............................................................................
 
-let test#strategy='vimterminal'
+if has('nvim')
+  let test#strategy='neovim'
+else
+  let test#strategy='vimterminal'
+endif
 
-let test#python#runner='pytest'
 let test#python#pytest#executable='docker-compose exec web py.test'
+
+let test#ruby#rails#executable='docker-compose exec -e RAILS_ENV=test webpacker rails test'
 
 let test#elixir#exunit#executable='docker-compose exec -e MIX_ENV=test web mix test'
 
@@ -625,4 +635,4 @@ nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-a> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
+nmap <silent> t<C-v> :TestVisit<CR>
