@@ -6,6 +6,7 @@ export PATH="${PATH}:${HOME}/.local/bin"
 
 # Default programs to run.
 export EDITOR="vim"
+export BROWSER=/usr/bin/firefox
 
 # Add colors to the less and man commands.
 export LESS=-R

@@ -31,6 +31,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 " Navigate and manipulate files in a tree view.
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-mapping-mark-children.vim'
+Plug 'lambdalisue/fern-hijack.vim'
 
 " Helpers for moving and manipulating files / directories.
 Plug 'tpope/vim-eunuch'
@@ -489,30 +490,11 @@ command! -bang -nargs=* Rg
 " lambdalisue/fern.vim
 " .............................................................................
 
-" Disable netrw.
-let g:loaded_netrw  = 1
-let g:loaded_netrwPlugin = 1
-let g:loaded_netrwSettings = 1
-let g:loaded_netrwFileHandlers = 1
-
-augroup my-fern-hijack
-  autocmd!
-  autocmd BufEnter * ++nested call s:hijack_directory()
-augroup END
-
-function! s:hijack_directory() abort
-  let path = expand('%:p')
-  if !isdirectory(path)
-    return
-  endif
-  bwipeout %
-  execute printf('Fern %s', fnameescape(path))
-endfunction
-
 " Custom settings and mappings.
 let g:fern#disable_default_mappings = 1
 
-noremap <silent> <Leader>f :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
+noremap <silent> <Leader>F :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
+noremap <silent> <Leader>f :Fern . -reveal=%<CR><C-w>=
 
 function! FernInit() abort
   nmap <buffer><expr>
@@ -530,8 +512,8 @@ function! FernInit() abort
   nmap <buffer> M <Plug>(fern-action-rename)
   nmap <buffer> h <Plug>(fern-action-hidden-toggle)
   nmap <buffer> r <Plug>(fern-action-reload)
-  nmap <buffer> k <Plug>(fern-action-mark)
-  nmap <buffer> K <Plug>(fern-action-mark-children:leaf)
+  nmap <buffer> l <Plug>(fern-action-mark)
+  nmap <buffer> L <Plug>(fern-action-mark-children:leaf)
   nmap <buffer> b <Plug>(fern-action-open:split)
   nmap <buffer> v <Plug>(fern-action-open:vsplit)
   nmap <buffer><nowait> < <Plug>(fern-action-leave)
