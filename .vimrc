@@ -118,6 +118,7 @@ Plug 'tpope/vim-rails'
 Plug 'vim-python/python-syntax'
 Plug 'vim-ruby/vim-ruby'
 Plug 'wgwoods/vim-systemd-syntax'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
