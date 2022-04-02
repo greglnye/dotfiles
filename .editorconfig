@@ -4,26 +4,20 @@
 root = true
 
 # Unix-style newlines with a newline ending every file
+# and sets default charset and trims trailing whitespace
 [*]
 end_of_line = lf
 insert_final_newline = true
+charset = utf-8
+trim_trailing_whitespace = true
 
 # Matches multiple files with brace expansion notation
-# Set default charset
-[*.{js,py,lua}]
-charset = utf-8
-
 # 2 space indentation
-[*.{js,json,lua}]
+[*.{bash,c,h,cpp,hpp,css,sass,scss,sh,go,htm,html,xhtml,ts,js,json,lua}]
 indent_style = space
 indent_size = 2
 
 # 4 space indentation
-[*.py]
+[*.{cs,java,ps1,psd1,psm1,py}]
 indent_style = space
 indent_size = 4
-
-# Matches the exact file
-[.jsbeautifyrc]
-indent_style = space
-indent_size = 2
