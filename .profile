@@ -3,7 +3,10 @@
 
 # Add all local binary paths to the system path.
 export PATH="${PATH}:${HOME}/.local/bin"
-export PATH="${PATH}:${HOME}/.asdf/installs/python/3.10.4/bin"
+export PATH="${PATH}:${HOME}/.asdf/installs/python/3.11.3/bin"
+export PATH="${PATH}:${HOME}/bin/ninja"
+export PATH="${PATH}:${HOME}/bin/vcpkg"
+export PATH="${PATH}:${HOME}/bin/llvm-project/build/bin"
 
 # Default programs to run.
 export EDITOR="vim"

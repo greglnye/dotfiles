@@ -67,3 +67,12 @@ export GPG_TTY=$(tty)
 export LIBGL_ALWAYS_INDIRECT=1
 
 eval "$(keychain --eval --quiet id_ed25519)"
+
+# pnpm
+export PNPM_HOME="/home/greg/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+export CMAKE_FILEPATH="/home/greg/.asdf/shims/cmake"
+export NINJA_FILEPATH="/home/greg/bin/ninja/ninja"
+export VCPKG_ROOT="/home/greg/bin/vcpkg/"
