@@ -66,4 +66,4 @@ export GPG_TTY=$(tty)
 
 export LIBGL_ALWAYS_INDIRECT=1
 
-eval "$(keychain --eval --quiet id_rsa)"
+eval "$(keychain --eval --quiet id_ed25519)"
