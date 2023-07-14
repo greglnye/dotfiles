@@ -1,13 +1,24 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    // Add custom actions and keybindings to this array.
-    // To unbind a key combination from your defaults.json, set the command to "unbound".
-    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
     "actions": 
     [
-        // To unbind a default keybinding, set the command to "unbound".
-        // Pane Management
-        // To allow pane focus moving within tmux
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "ctrl+alt+up"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "ctrl+alt+right"
+        },
         {
             "command": "unbound",
             "keys": "alt+down"
@@ -24,7 +35,6 @@
             "command": "unbound",
             "keys": "alt+up"
         },
-        // re-bind moveFocus to allow pane focus moving within powershell
         {
             "command": 
             {
@@ -40,27 +50,10 @@
                 "direction": "left"
             },
             "keys": "ctrl+alt+left"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "keys": "ctrl+alt+right"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "up"
-            },
-            "keys": "ctrl+alt+up"
         }
     ],
     "copyFormatting": "none",
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "keybindings": null,
     "launchMode": "maximized",
     "profiles": 
     {
@@ -69,21 +62,22 @@
             "colorScheme": "One Half Dark",
             "cursorHeight": 25,
             "cursorShape": "vintage",
-            "fontFace": "Cascadia Code PL",
-            "fontSize": 12,
+            "font": 
+            {
+                "face": "Cascadia Code PL",
+                "size": 12
+            },
             "padding": "1, 1, 1, 1",
             "scrollbarState": "hidden"
         },
         "list": 
         [
             {
-                "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": true,
                 "name": "Windows PowerShell"
             },
             {
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
@@ -107,6 +101,18 @@
                 "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{2331d0a3-11e7-549e-aa69-5b08bd523168}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{6f42f326-3dab-5c73-8b17-ed2c005ecb50}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
