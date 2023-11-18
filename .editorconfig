@@ -11,13 +11,16 @@ insert_final_newline = true
 charset = utf-8
 trim_trailing_whitespace = true
 
+[password.txt]
+insert_final_newline = false
+
 # Matches multiple files with brace expansion notation
 # 2 space indentation
-[*.{bash,c,h,cpp,hpp,css,sass,scss,sh,go,htm,html,xhtml,ts,js,json,lua}]
+[*.{bash,c,h,cxx,cpp,hpp,css,sass,scss,sh,htm,html,xhtml,ts,js,json,lua}]
 indent_style = space
 indent_size = 2
 
 # 4 space indentation
-[*.{cs,java,ps1,psd1,psm1,py}]
+[*.{cs,java,ps1,psd1,psm1,py,rs}]
 indent_style = space
 indent_size = 4

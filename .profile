@@ -2,11 +2,14 @@
 # This file runs once at login.
 
 # Add all local binary paths to the system path.
-export PATH="${PATH}:${HOME}/.local/bin"
-export PATH="${PATH}:${HOME}/.asdf/installs/python/3.11.3/bin"
-export PATH="${PATH}:${HOME}/bin/ninja"
-export PATH="${PATH}:${HOME}/bin/vcpkg"
-export PATH="${PATH}:${HOME}/bin/llvm-project/build/bin"
+export PATH="${HOME}/.local/bin:${PATH}"
+export PATH="${HOME}/bin/ninja:${PATH}"
+export PATH="${HOME}/bin/vcpkg:${PATH}"
+export PATH="${HOME}/bin/llvm-project/build/bin:${PATH}"
+export PATH="${HOME}/kustomize:${PATH}"
+
+export JAVA_HOME="${HOME}/bin/jdk-17"
+export PATH="${JAVA_HOME}/bin:${PATH}"
 
 # Default programs to run.
 export EDITOR="vim"
@@ -25,3 +28,6 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 # If bash is the login shell, then source ~/.bashrc if it exists.
 echo "${0}" | grep "bash$" >/dev/null \
   && [ -f "${HOME}/.bashrc" ] && source "${HOME}/.bashrc"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(oh-my-posh init bash)"

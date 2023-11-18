@@ -8,3 +8,5 @@
 	path = ~/.gitconfig.user
 [init]
 	defaultBranch = main
+[safe]
+	directory = /home/greg/dev/containers/java/spring-petclinic/
