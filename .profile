@@ -25,3 +25,6 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 # If bash is the login shell, then source ~/.bashrc if it exists.
 echo "${0}" | grep "bash$" >/dev/null \
   && [ -f "${HOME}/.bashrc" ] && source "${HOME}/.bashrc"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(oh-my-posh init bash)"
