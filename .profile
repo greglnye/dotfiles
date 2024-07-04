@@ -29,5 +29,3 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 echo "${0}" | grep "bash$" >/dev/null \
   && [ -f "${HOME}/.bashrc" ] && source "${HOME}/.bashrc"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-eval "$(oh-my-posh init bash)"

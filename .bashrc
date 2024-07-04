@@ -87,3 +87,6 @@ if [ -f '/home/greg/google-cloud-sdk/path.bash.inc' ]; then . '/home/greg/google
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/greg/google-cloud-sdk/completion.bash.inc' ]; then . '/home/greg/google-cloud-sdk/completion.bash.inc'; fi
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json)"
